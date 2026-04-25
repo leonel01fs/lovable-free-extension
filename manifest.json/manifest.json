@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Lovable Free",
+  "version": "1.0.0",
+  "description": "Chat local para organizar prompts, mensagens e arquivos para Lovable e GitHub.",
+  "permissions": ["storage", "downloads"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Lovable Free"
+  }
+}
