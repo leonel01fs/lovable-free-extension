@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Lovable Free Extension",
+  "version": "1.0.0",
+  "description": "Extensão gratuita para enviar prompts ao Lovable com painel lateral e botão flutuante.",
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "sidePanel"],
+  "host_permissions": ["https://*.lovable.dev/*", "https://lovable.dev/*"],
+  "action": { "default_title": "Lovable Free Extension" },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["https://*.lovable.dev/*", "https://lovable.dev/*"],
+    "js": ["content.js"],
+    "css": ["floating.css"],
+    "run_at": "document_idle"
+  }]
+}
